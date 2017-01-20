@@ -4,6 +4,7 @@ author: "Andrew Woods"
 date: "20 January 2017"
 output: ioslides_presentation
 transition: concave
+theme: solarized
 ---
 
 ```{r setup, include=FALSE}
