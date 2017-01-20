@@ -1,0 +1,53 @@
+---
+title: "Data Products Week 4 Project"
+author: "Andrew Woods"
+date: "20 January 2017"
+output: ioslides_presentation
+transition: concave
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+library(ggplot2)
+library(GGally)
+```
+
+## 
+
+This simple shiny app applies k-means to group items in a data set.  In this examle we use the bulit in iris data set.
+
+Lets take a look at the iris data
+
+
+```{r}
+pairs(iris)
+```
+
+
+## 
+
+Can k-means group the data by species?  For example:
+
+
+```{r}
+p <- ggplot(iris, aes_string(x=iris$Petal.Length, y=iris$Petal.Width, color=iris$Species)) +
+    geom_point(size=5)+
+    labs(color="Species", x="Petal Length", y="Petal Width")
+p
+```
+
+##
+
+Lets do a calculation to show k-mean output in r:
+
+```{r, echo="TRUE"}
+k <- kmeans(iris[,3:4],3)
+k$centers
+k$withinss
+```
+
+##
+
+Look at the shiny app here:
+
+https://andrewwoods-coursera.shinyapps.io/dataProductsWeek4Project/
