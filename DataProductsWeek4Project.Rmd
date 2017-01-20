@@ -15,7 +15,7 @@ library(GGally)
 
 ## 
 
-This simple shiny app applies k-means to group items in a data set.  In this examle we use the bulit in iris data set.
+This simple shiny app applies k-means to group items in a data set.  In this example we use the bulit in iris data set.
 
 Lets take a look at the iris data
 
